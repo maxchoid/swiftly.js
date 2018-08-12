@@ -6,8 +6,8 @@ const Messages = {
   TOKEN_INVALID: 'The token which was provided is invalid',
   TOKEN_MISSING: 'Request to use token, but token was unavailable to the client.',
 
-  WS_CONNECTION_TIMEOUT: 'The connection to the gateway timed out - check Discord status page for further information.',
-  WS_CONNECTION_EXISTS: 'There is already an existing WebSocket connection. - the bot is running already on a instance.',
+  WS_CONNECTION_TIMEOUT: 'The connection to the gateway timed out',
+  WS_CONNECTION_EXISTS: 'There is already an existing WebSocket connection.',
   WS_NOT_OPEN: (data = 'data') => `Websocket not open to send ${data}`,
 
   PERMISSIONS_INVALID: 'The bot or user does not have the correct permissions.',
