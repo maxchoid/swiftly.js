@@ -49,7 +49,7 @@ const client = new swift.Client();
 const token = 'TOKEN HERE';
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`[CONNECTED] Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
@@ -63,11 +63,11 @@ client.login(token);
 
 ## Links
 * [Documentation](https://swiftlyjs.org/#/docs)
-* [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
+* [Swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
 * [GitHub](https://github.com/swiftlyjs/swiftly.js)
 * [NPM](https://www.npmjs.com/package/swiftly.js)
 
 ## Help
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle
-nudge in the right direction, please don't hesitate to join our official [swiftly.js Server](https://discord.gg/Y4yAKBS).
+nudge in the right direction, please don't hesitate to join our official [Swiftly.js Server](https://discord.gg/Y4yAKBS).
