@@ -11,7 +11,7 @@ jobs:
       script: bash ./travis/deploy.sh
       env:
         - ENCRYPTION_LABEL="af862fa96d3e"
-        - COMMIT_AUTHOR_EMAIL="amishshah.2k@gmail.com"
+        - COMMIT_AUTHOR_EMAIL="lukas@connectservers.net"
 cache:
   directories:
     - node_modules

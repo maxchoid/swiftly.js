@@ -25,7 +25,7 @@
     "node",
     "discordapp"
   ],
-  "author": "Amish Shah <amishshah.2k@gmail.com>",
+  "author": "Lukas Harrison <lukas@connectservers.net>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/iilukas/swiftly.js/issues"
