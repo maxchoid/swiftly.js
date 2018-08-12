@@ -6,8 +6,8 @@
   <br />
   <p>
     <a href="https://discord.gg/Y4yAKBS"><img src="https://discordapp.com/api/guilds/477971677742104597/embed.png" alt="Discord server" /></a>
-    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/v/swiftly.js.svg?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/dt/swiftly.js.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/v/swiftly.js.svg" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/dt/swiftly.js.svg?" alt="NPM downloads" /></a>
     <a href="https://travis-ci.org/iilukas/swiftly.js"><img src="https://travis-ci.org/iilukas/swiftly.js.svg" alt="Build status" /></a>
     <a href="https://david-dm.org/iilukas/swiftly.js"><img src="https://img.shields.io/david/iilukas/swiftly.js.svg?maxAge=3600" alt="Dependencies" /></a>
     <a href="https://www.patreon.com/swiftlyjs"><img src="https://img.shields.io/badge/donate-patreon-F96854.svg" alt="Patreon" /></a>
@@ -27,7 +27,7 @@ swiftlyJS is a powerful [Node](https://nodejs.org) module that allows you to int
 - 100% coverage of the Discord API
 
 ## Installation
-**Node.js 8.0.0 or newer is required.**  
+**Node.js 8.0.0+ is required.**  
 Ignore any warnings about unmet peer dependencies, as they're all optional.
 
 Without voice support: `npm install swiftly.js`  
@@ -52,6 +52,7 @@ For production bots, using node-opus should be considered a necessity, especiall
 ```js
 const Discord = require('swiftly.js');
 const client = new Discord.Client();
+const token = '';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -63,13 +64,12 @@ client.on('message', msg => {
   }
 });
 
-client.login('token');
+client.login(token);
 ```
 
 ## Links
 * [Website](https://swiftly.js.org/) ([source](https://github.com/swiftlyjs/website))
 * [Documentation](https://swiftly.js.org/#/docs)
-* [Guide](https://swiftlyjs.guide/) ([source](https://github.com/swiftlyjs/guide))
 * [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
 * [GitHub](https://github.com/swiftlyjs/swiftly.js)

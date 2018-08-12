@@ -75,7 +75,6 @@ client.login('token');
 ## Links
 * [Website](https://swiftly.js.org/) ([source](https://github.com/swiftlyjs/website))
 * [Documentation](https://swiftly.js.org/#/docs)
-* [Guide](https://swiftlyjs.guide/) ([source](https://github.com/swiftlyjs/guide))
 * [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
 * [GitHub](https://github.com/swiftlyjs/swiftly.js)
