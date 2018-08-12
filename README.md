@@ -46,7 +46,7 @@ With voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `np
 ```js
 const swift = require('swiftly.js');
 const client = new swift.Client();
-const token = '';
+const token = 'TOKEN HERE';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
