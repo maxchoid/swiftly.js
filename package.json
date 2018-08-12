@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "@types/node": "^10.0.3",
-    "swiftly.js-docgen": "swiftly/docgen",
     "eslint": "^5.0.1",
     "json-filter-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^1.1.8",
