@@ -1,6 +1,6 @@
 # Sending Attachments
 
-In here you'll see a few examples showing how you can send an attachment using swift.js.
+In here you'll see a few examples showing how you can send an attachment using swiftly.js.
 
 ## Sending an attachment using a URL
 
@@ -9,8 +9,8 @@ There are a few ways you can do this, but we'll show you the easiest.
 The following examples use [MessageAttachment](/#/docs/main/master/class/MessageAttachment).
 
 ```js
-// Extract the required classes from the swift.js module
-const { Client, MessageAttachment } = require('swift.js');
+// Extract the required classes from the swiftly.js module
+const { Client, MessageAttachment } = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Client();
@@ -44,8 +44,8 @@ And here is the result:
 But what if you want to send an attachment with a message content? Fear not, for it is easy to do that too! We'll recommend reading [the TextChannel's "send" function documentation](/#/docs/main/master/class/TextChannel?scrollTo=send) to see what other options are available.
 
 ```js
-// Extract the required classes from the swift.js module
-const { Client, MessageAttachment } = require('swift.js');
+// Extract the required classes from the swiftly.js module
+const { Client, MessageAttachment } = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Client();
@@ -81,8 +81,8 @@ And here's the result of this one:
 Sending a local file isn't hard either! We'll be using [MessageAttachment](/#/docs/main/master/class/MessageAttachment) for these examples too.
 
 ```js
-// Extract the required classes from the swift.js module
-const { Client, MessageAttachment } = require('swift.js');
+// Extract the required classes from the swiftly.js module
+const { Client, MessageAttachment } = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Client();
@@ -119,8 +119,8 @@ In the following example, we'll be getting the buffer from a `memes.txt` file, a
 You can use any buffer you want, and send it. Just make sure to overwrite the filename if it isn't an image!
 
 ```js
-// Extract the required classes from the swift.js module
-const { Client, MessageAttachment } = require('swift.js');
+// Extract the required classes from the swiftly.js module
+const { Client, MessageAttachment } = require('swiftly.js');
 
 // Import the native fs module
 const fs = require('fs');
@@ -146,7 +146,7 @@ client.on('message', message => {
 		 * Create the attachment using MessageAttachment,
 		 * overwritting the default file name to 'memes.txt'
 		 * Read more about it over at
-		 * http://swift.js.org/#/docs/main/master/class/MessageAttachment
+		 * http://swiftly.js.org/#/docs/main/master/class/MessageAttachment
 		 */
 		const attachment = new MessageAttachment(buffer, 'memes.txt');
 		// Send the attachment in the message channel with a content

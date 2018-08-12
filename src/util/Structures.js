@@ -1,5 +1,5 @@
 /**
- * Allows for the extension of built-in Swift.js structures that are instantiated by {@link DataStore DataStores}.
+ * Allows for the extension of built-in swiftly.js structures that are instantiated by {@link DataStore DataStores}.
  */
 class Structures {
   constructor() {
@@ -23,7 +23,7 @@ class Structures {
    * extended class/prototype
    * @returns {Function} Extended class/prototype returned from the extender
    * @example
-   * const { Structures } = require('swift.js');
+   * const { Structures } = require('swiftly.js');
    *
    * Structures.extend('Guild', Guild => {
    *   class CoolGuild extends Guild {

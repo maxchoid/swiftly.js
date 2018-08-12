@@ -20,7 +20,7 @@ if (prod) {
 }
 
 // eslint-disable-next-line max-len
-const filename = `discord${process.env.VERSIONED ? `.${version}` : ''}${prod ? '.min' : ''}.js`;
+const filename = `swiftly${process.env.VERSIONED ? `.${version}` : ''}${prod ? '.min' : ''}.js`;
 
 module.exports = {
   entry: './src/index.js',

@@ -1,7 +1,7 @@
 # Introduction to Voice
-Voice in swift.js can be used for many things, such as music bots, recording or relaying audio.
+Voice in swiftly.js can be used for many things, such as music bots, recording or relaying audio.
 
-In swift.js, you can use voice by connecting to a `VoiceChannel` to obtain a `VoiceConnection`, where you can start streaming and receiving audio.
+In swiftly.js, you can use voice by connecting to a `VoiceChannel` to obtain a `VoiceConnection`, where you can start streaming and receiving audio.
 
 To get started, make sure you have:
 * FFmpeg - `npm install ffmpeg-binaries`
@@ -10,7 +10,7 @@ To get started, make sure you have:
   * `npm install opusscript`
 * a good network connection
 
-The preferred opus engine is node-opus, as it performs significantly better than opusscript. When both are available, swift.js will automatically choose node-opus.
+The preferred opus engine is node-opus, as it performs significantly better than opusscript. When both are available, swiftly.js will automatically choose node-opus.
 Using opusscript is only recommended for development environments where node-opus is tough to get working.
 For production bots, using node-opus should be considered a necessity, especially if they're going to be running on multiple servers.
 
@@ -19,7 +19,7 @@ The example below reacts to a message and joins the sender's voice channel, catc
 as it allows us to obtain a `VoiceConnection` that we can start to stream audio with.
 
 ```js
-const Discord = require('swift.js');
+const Discord = require('swiftly.js');
 const client = new Discord.Client();
 
 client.login('token here');
@@ -79,7 +79,7 @@ These are just a subset of the options available (consult documentation for a fu
 
 ### What can I play?
 
-swift.js allows you to play a lot of things:
+swiftly.js allows you to play a lot of things:
 
 ```js
 // ReadableStreams, in this example YouTube audio

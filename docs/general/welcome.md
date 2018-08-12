@@ -1,30 +1,30 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://swift.js.org"><img src="/static/logo.svg" width="546" alt="swift.js" id="djs-logo" /></a>
+    <a href="https://swiftly.js.org"><img src="/static/logo.svg" width="546" alt="swiftly.js" id="djs-logo" /></a>
   </p>
   <br />
   <p>
-    <a href="https://discord.gg/bRCvFy9"><img src="https://discordapp.com/api/guilds/222078108977594368/embed.png" alt="Discord server" /></a>
-    <a href="https://www.npmjs.com/package/swift.js"><img src="https://img.shields.io/npm/v/swift.js.svg?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/swift.js"><img src="https://img.shields.io/npm/dt/swift.js.svg?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://travis-ci.org/swiftjs/swift.js"><img src="https://travis-ci.org/swiftjs/swift.js.svg" alt="Build status" /></a>
-    <a href="https://david-dm.org/swiftjs/swift.js"><img src="https://img.shields.io/david/swiftjs/swift.js.svg?maxAge=3600" alt="Dependencies" /></a>
-    <a href="https://www.patreon.com/swiftjs"><img src="https://img.shields.io/badge/donate-patreon-F96854.svg" alt="Patreon" /></a>
+    <a href="https://discord.gg/Y4yAKBS"><img src="https://discordapp.com/api/guilds/222078108977594368/embed.png" alt="Discord server" /></a>
+    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/v/swiftly.js.svg?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/dt/swiftly.js.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://travis-ci.org/swiftlyjs/swiftly.js"><img src="https://travis-ci.org/swiftlyjs/swiftly.js.svg" alt="Build status" /></a>
+    <a href="https://david-dm.org/swiftlyjs/swiftly.js"><img src="https://img.shields.io/david/swiftlyjs/swiftly.js.svg?maxAge=3600" alt="Dependencies" /></a>
+    <a href="https://www.patreon.com/swiftlyjs"><img src="https://img.shields.io/badge/donate-patreon-F96854.svg" alt="Patreon" /></a>
   </p>
   <p>
-    <a href="https://nodei.co/npm/swift.js/"><img src="https://nodei.co/npm/swift.js.png?downloads=true&stars=true" alt="NPM info" /></a>
+    <a href="https://nodei.co/npm/swiftly.js/"><img src="https://nodei.co/npm/swiftly.js.png?downloads=true&stars=true" alt="NPM info" /></a>
   </p>
 </div>
 
 # Welcome!
-Welcome to the swift.js v12 documentation.
+Welcome to the swiftly.js v12 documentation.
 
 v12 is still very much a work-in-progress, as we're aiming to make it the best it can possibly be before releasing.
 Only use it if you are fond of living life on the bleeding edge.
 
 ## About
-swift.js is a powerful [Node.js](https://nodejs.org) module that allows you to interact with the
+swiftly.js is a powerful [Node.js](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
 - Object-oriented
@@ -36,12 +36,12 @@ swift.js is a powerful [Node.js](https://nodejs.org) module that allows you to i
 **Node.js 8.0.0 or newer is required.**  
 Ignore any warnings about unmet peer dependencies, as they're all optional.
 
-Without voice support: `npm install swift.js`  
-With voice support ([node-opus](https://www.npmjs.com/package/node-opus)): `npm install swift.js node-opus`  
-With voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `npm install swift.js opusscript`
+Without voice support: `npm install swiftly.js`  
+With voice support ([node-opus](https://www.npmjs.com/package/node-opus)): `npm install swiftly.js node-opus`  
+With voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `npm install swiftly.js opusscript`
 
 ### Audio engines
-The preferred audio engine is node-opus, as it performs significantly better than opusscript. When both are available, swift.js will automatically choose node-opus.
+The preferred audio engine is node-opus, as it performs significantly better than opusscript. When both are available, swiftly.js will automatically choose node-opus.
 Using opusscript is only recommended for development environments where node-opus is tough to get working.
 For production bots, using node-opus should be considered a necessity, especially if they're going to be running on multiple servers.
 
@@ -56,7 +56,7 @@ For production bots, using node-opus should be considered a necessity, especiall
 
 ## Example usage
 ```js
-const Discord = require('swift.js');
+const Discord = require('swiftly.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -73,23 +73,23 @@ client.login('token');
 ```
 
 ## Links
-* [Website](https://swift.js.org/) ([source](https://github.com/swiftjs/website))
-* [Documentation](https://swift.js.org/#/docs)
-* [Guide](https://swiftjs.guide/) ([source](https://github.com/swiftjs/guide))
-* [swift.js Discord server](https://discord.gg/bRCvFy9)
+* [Website](https://swiftly.js.org/) ([source](https://github.com/swiftlyjs/website))
+* [Documentation](https://swiftly.js.org/#/docs)
+* [Guide](https://swiftlyjs.guide/) ([source](https://github.com/swiftlyjs/guide))
+* [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
-* [GitHub](https://github.com/swiftjs/swift.js)
-* [NPM](https://www.npmjs.com/package/swift.js)
+* [GitHub](https://github.com/swiftlyjs/swiftly.js)
+* [NPM](https://www.npmjs.com/package/swiftly.js)
 * [Related libraries](https://discordapi.com/unofficial/libs.html)
 
 ### Extensions
-* [RPC](https://www.npmjs.com/package/discord-rpc) ([source](https://github.com/swiftjs/RPC))
+* [RPC](https://www.npmjs.com/package/discord-rpc) ([source](https://github.com/swiftlyjs/RPC))
 
 ## Contributing
 Before creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the
-[documentation](https://swift.js.org/#/docs).  
-See [the contribution guide](https://github.com/swiftjs/swift.js/blob/master/.github/CONTRIBUTING.md) if you'd like to submit a PR.
+[documentation](https://swiftly.js.org/#/docs).  
+See [the contribution guide](https://github.com/swiftlyjs/swiftly.js/blob/master/.github/CONTRIBUTING.md) if you'd like to submit a PR.
 
 ## Help
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle
-nudge in the right direction, please don't hesitate to join our official [swift.js Server](https://discord.gg/bRCvFy9).
+nudge in the right direction, please don't hesitate to join our official [swiftly.js Server](https://discord.gg/Y4yAKBS).

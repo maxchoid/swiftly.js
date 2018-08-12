@@ -4,16 +4,16 @@ const kCode = Symbol('code');
 const messages = new Map();
 
 /**
- * Extend an error of some sort into a swiftjsError.
+ * Extend an error of some sort into a swiftlyjsError.
  * @param {Error} Base Base error to extend
- * @returns {swiftjsError}
+ * @returns {swiftlyjsError}
  */
-function makeswiftjsError(Base) {
-  return class swiftjsError extends Base {
+function makeswiftlyjsError(Base) {
+  return class swiftlyjsError extends Base {
     constructor(key, ...args) {
       super(message(key, args));
       this[kCode] = key;
-      if (Error.captureStackTrace) Error.captureStackTrace(this, swiftjsError);
+      if (Error.captureStackTrace) Error.captureStackTrace(this, swiftlyjsError);
     }
 
     get name() {
@@ -53,7 +53,7 @@ function register(sym, val) {
 
 module.exports = {
   register,
-  Error: makeswiftjsError(Error),
-  TypeError: makeswiftjsError(TypeError),
-  RangeError: makeswiftjsError(RangeError),
+  Error: makeswiftlyjsError(Error),
+  TypeError: makeswiftlyjsError(TypeError),
+  RangeError: makeswiftlyjsError(RangeError),
 };

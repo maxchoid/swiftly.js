@@ -1,5 +1,5 @@
 # Web builds
-In addition to your usual Node applications, swift.js has special distributions available that are capable of running in web browsers.
+In addition to your usual Node applications, swiftly.js has special distributions available that are capable of running in web browsers.
 This is useful for client-side web apps that need to interact with the Discord API.
 [Webpack 3](https://webpack.js.org/) is used to build these.
 
@@ -10,14 +10,14 @@ This is useful for client-side web apps that need to interact with the Discord A
 - None of the native optional packages are usable.
 
 ### Require Library
-If you are making your own webpack project, you can require `swift.js/browser` wherever you need to use swift.js, like so:
+If you are making your own webpack project, you can require `swiftly.js/browser` wherever you need to use swiftly.js, like so:
 ```js
-const Discord = require('swift.js/browser');
+const Discord = require('swiftly.js/browser');
 // do something with Discord like you normally would
 ```
 
 ### Webpack File
-You can obtain your desired version of swift.js' web build from the [webpack branch](https://github.com/swiftjs/swift.js/tree/webpack) of the GitHub repository.
+You can obtain your desired version of swiftly.js' web build from the [webpack branch](https://github.com/swiftlyjs/swiftly.js/tree/webpack) of the GitHub repository.
 There is a file for each branch and version of the library, and the ones ending in `.min.js` are minified to substantially reduce the size of the source code.
 
 Include the file on the page just as you would any other JS library, like so:
@@ -25,7 +25,7 @@ Include the file on the page just as you would any other JS library, like so:
 <script type="text/javascript" src="discord.VERSION.min.js"></script>
 ```
 
-Rather than importing swift.js with `require('swift.js')`, the entire `Discord` object is available as a global (on the `window`) object.
+Rather than importing swiftly.js with `require('swiftly.js')`, the entire `Discord` object is available as a global (on the `window`) object.
 The usage of the API isn't any different from using it in Node.js.
 
 #### Example

@@ -63,8 +63,8 @@ exports.DefaultOptions = {
     compress: false,
     properties: {
       $os: browser ? 'browser' : process.platform,
-      $browser: 'swift.js',
-      $device: 'swift.js',
+      $browser: 'swiftly.js',
+      $device: 'swiftly.js',
     },
     version: 6,
   },

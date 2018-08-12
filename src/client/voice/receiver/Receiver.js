@@ -27,7 +27,7 @@ class VoiceReceiver extends EventEmitter {
   /**
    * Options passed to `VoiceReceiver#createStream`.
    * @typedef {Object} ReceiveStreamOptions
-   * @property {string} [mode='opus'] The mode for audio output. This defaults to opus, meaning swift.js won't decode
+   * @property {string} [mode='opus'] The mode for audio output. This defaults to opus, meaning swiftly.js won't decode
    * the packets for you. You can set this to 'pcm' so that the stream's output will be 16-bit little-endian stereo
    * audio
    * @property {string} [end='silence'] When the stream should be destroyed. If `silence`, this will be when the user

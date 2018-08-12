@@ -2,8 +2,8 @@
  * Send a message using a webhook
  */
 
-// Import the swift.js module
-const Discord = require('swift.js');
+// Import the swiftly.js module
+const Discord = require('swiftly.js');
 
 // Create a new webhook
 const hook = new Discord.WebhookClient('webhook id', 'webhook token');

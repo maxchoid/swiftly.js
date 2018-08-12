@@ -51,7 +51,7 @@ class ClientUser extends Structures.get('User') {
    * @returns {Promise<ClientUser>}
    * @example
    * // Set username
-   * client.user.setUsername('swiftjs')
+   * client.user.setUsername('swiftlyjs')
    *   .then(user => console.log(`My new username is ${user.username}`))
    *   .catch(console.error);
    */
@@ -92,7 +92,7 @@ class ClientUser extends Structures.get('User') {
    * @returns {Promise<Presence>}
    * @example
    * // Set the client user's presence
-   * client.user.setPresence({ activity: { name: 'with swift.js' }, status: 'idle' })
+   * client.user.setPresence({ activity: { name: 'with swiftly.js' }, status: 'idle' })
    *   .then(console.log)
    *   .catch(console.error);
    */
@@ -132,7 +132,7 @@ class ClientUser extends Structures.get('User') {
    * @returns {Promise<Presence>}
    * @example
    * // Set the client user's activity
-   * client.user.setActivity('swift.js', { type: 'WATCHING' })
+   * client.user.setActivity('swiftly.js', { type: 'WATCHING' })
    *   .then(presence => console.log(`Activity set to ${presence.game.name}`))
    *   .catch(console.error);
    */

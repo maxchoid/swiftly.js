@@ -7,8 +7,8 @@ In here, you'll see some basic examples for kicking and banning a member.
 Let's say you have a member that you'd like to kick. Here is an example of how you *can* do it.
 
 ```js
-// Import the swift.js module
-const Discord = require('swift.js');
+// Import the swiftly.js module
+const Discord = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -28,7 +28,7 @@ client.on('message', message => {
   // If the message content starts with "!kick"
   if (message.content.startsWith('!kick')) {
     // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://swift.js.org/#/docs/main/master/class/MessageMentions
+    // Read more about mentions over at https://swiftly.js.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
     // If we have a user mentioned
     if (user) {
@@ -76,8 +76,8 @@ And the result is:
 Banning works the same way as kicking, but it has slightly more options that can be changed.
 
 ```js
-// Import the swift.js module
-const Discord = require('swift.js');
+// Import the swiftly.js module
+const Discord = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -97,7 +97,7 @@ client.on('message', message => {
   // if the message content starts with "!ban"
   if (message.content.startsWith('!ban')) {
     // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://swift.js.org/#/docs/main/master/class/MessageMentions
+    // Read more about mentions over at https://swiftly.js.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
     // If we have a user mentioned
     if (user) {
@@ -110,7 +110,7 @@ client.on('message', message => {
          * Make sure you run this on a member, not a user!
          * There are big differences between a user and a member
          * Read more about what ban options there are over at
-         * https://swift.js.org/#/docs/main/master/class/GuildMember?scrollTo=ban
+         * https://swiftly.js.org/#/docs/main/master/class/GuildMember?scrollTo=ban
          */
         member.ban({
           reason: 'They were bad!',

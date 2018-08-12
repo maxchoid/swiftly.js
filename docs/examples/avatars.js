@@ -2,8 +2,8 @@
  * Send a user a link to their avatar
  */
 
-// Import the swift.js module
-const Discord = require('swift.js');
+// Import the swiftly.js module
+const Discord = require('swiftly.js');
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
