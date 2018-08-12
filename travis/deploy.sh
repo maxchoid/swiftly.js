@@ -59,7 +59,7 @@ mv docs/docs.json out/$SOURCE.json
 cd out
 git add .
 git config user.name "Travis CI"
-git config user.email "lukas@connectservers.net"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
 git commit -m "Docs build for ${SOURCE_TYPE} ${SOURCE}: ${SHA}" || true
 git push $SSH_REPO $TARGET_BRANCH
 
@@ -78,6 +78,6 @@ mv webpack/discord.min.js out/discord.$SOURCE.min.js
 cd out
 git add .
 git config user.name "Travis CI"
-git config user.email "lukas@connectservers.net"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
 git commit -m "Webpack build for ${SOURCE_TYPE} ${SOURCE}: ${SHA}" || true
 git push $SSH_REPO $TARGET_BRANCH
