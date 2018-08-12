@@ -30,6 +30,7 @@ swiftlyJS is a powerful [Node](https://nodejs.org) module that allows you to int
 **Node.js 8.0.0+ is required.**  
 Ignore any warnings about unmet peer dependencies, as they're all optional.
 
+
 Without voice support: `npm install swiftly.js`  
 With voice support ([node-opus](https://www.npmjs.com/package/node-opus)): `npm install swiftly.js node-opus`  
 With voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `npm install swiftly.js opusscript`
