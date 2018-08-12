@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://swiftly.js.org"><img src="/static/logo.svg" width="546" alt="swiftly.js" id="djs-logo" /></a>
+    <a href="https://swiftlyjs.org"><img src="/static/logo.svg" width="546" alt="swiftly.js" id="djs-logo" /></a>
   </p>
   <br />
   <p>
@@ -73,8 +73,8 @@ client.login('token');
 ```
 
 ## Links
-* [Website](https://swiftly.js.org/) ([source](https://github.com/swiftlyjs/website))
-* [Documentation](https://swiftly.js.org/#/docs)
+* [Website](https://swiftlyjs.org/) ([source](https://github.com/swiftlyjs/website))
+* [Documentation](https://swiftlyjs.org/#/docs)
 * [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
 * [GitHub](https://github.com/swiftlyjs/swiftly.js)
@@ -86,7 +86,7 @@ client.login('token');
 
 ## Contributing
 Before creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the
-[documentation](https://swiftly.js.org/#/docs).  
+[documentation](https://swiftlyjs.org/#/docs).  
 See [the contribution guide](https://github.com/swiftlyjs/swiftly.js/blob/master/.github/CONTRIBUTING.md) if you'd like to submit a PR.
 
 ## Help

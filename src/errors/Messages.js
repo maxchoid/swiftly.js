@@ -1,21 +1,21 @@
-const { register } = require('./DJSError');
+const { register } = require('./SWIFTError');
 
 const Messages = {
   CLIENT_INVALID_OPTION: (prop, must) => `The ${prop} option must be ${must}`,
 
-  TOKEN_INVALID: 'An invalid token was provided.',
+  TOKEN_INVALID: 'The token which was provided is invalid',
   TOKEN_MISSING: 'Request to use token, but token was unavailable to the client.',
 
-  WS_CONNECTION_TIMEOUT: 'The connection to the gateway timed out.',
-  WS_CONNECTION_EXISTS: 'There is already an existing WebSocket connection.',
+  WS_CONNECTION_TIMEOUT: 'The connection to the gateway timed out - check Discord status page for further information.',
+  WS_CONNECTION_EXISTS: 'There is already an existing WebSocket connection. - the bot is running already on a instance.',
   WS_NOT_OPEN: (data = 'data') => `Websocket not open to send ${data}`,
 
-  PERMISSIONS_INVALID: 'Invalid permission string or number.',
+  PERMISSIONS_INVALID: 'The bot or user does not have the correct permissions.',
 
   RATELIMIT_INVALID_METHOD: 'Unknown rate limiting method.',
 
   SHARDING_INVALID: 'Invalid shard settings were provided.',
-  SHARDING_REQUIRED: 'This session would have handled too many guilds - Sharding is required.',
+  SHARDING_REQUIRED: 'This session would have handled too many servers - Sharding is required on this bot.',
   SHARDING_CHILD_CONNECTION: 'Failed to send message to shard\'s process.',
   SHARDING_PARENT_CONNECTION: 'Failed to send message to master process.',
   SHARDING_NO_SHARDS: 'No shards have been spawned.',
@@ -26,20 +26,20 @@ const Messages = {
   SHARDING_READY_DISCONNECTED: id => `Shard ${id}'s Client disconnected before becoming ready.`,
   SHARDING_READY_DIED: id => `Shard ${id}'s process exited before its Client became ready.`,
 
-  COLOR_RANGE: 'Color must be within the range 0 - 16777215 (0xFFFFFF).',
-  COLOR_CONVERT: 'Unable to convert color to a number.',
+  COLOR_RANGE: 'Error! The HEX Color must be within the range 0 - 16777215 (0xFFFFFF).',
+  COLOR_CONVERT: 'Error! Unable to convert color to a number.',
 
-  EMBED_FIELD_COUNT: 'MessageEmbeds may not exceed 25 fields.',
-  EMBED_FIELD_NAME: 'MessageEmbed field names may not be empty.',
-  EMBED_FIELD_VALUE: 'MessageEmbed field values may not be empty.',
+  EMBED_FIELD_COUNT: 'The Message Embed may not exceed 25 fields.',
+  EMBED_FIELD_NAME: 'The Message Embed field names may not be empty.',
+  EMBED_FIELD_VALUE: 'The Message Embed field values may not be empty.',
 
-  FILE_NOT_FOUND: file => `File could not be found: ${file}`,
+  FILE_NOT_FOUND: file => `The attachment file could not be found: ${file}`,
 
-  USER_NO_DMCHANNEL: 'No DM Channel exists!',
+  USER_NO_DMCHANNEL: 'No DM Channel currently exists!',
 
   VOICE_INVALID_HEARTBEAT: 'Tried to set voice heartbeat but no valid interval was specified.',
   VOICE_USER_MISSING: 'Couldn\'t resolve the user to create stream.',
-  VOICE_STREAM_EXISTS: 'There is already an existing stream for that user.',
+  VOICE_STREAM_EXISTS: 'There is already an existing stream for that user. - connection already running.',
   VOICE_JOIN_CHANNEL: (full = false) =>
     `You do not have permission to join this voice channel${full ? '; it is full.' : '.'}`,
   VOICE_CONNECTION_TIMEOUT: 'Connection not established within 15 seconds.',
@@ -55,7 +55,7 @@ const Messages = {
 
   VOICE_STATE_UNCACHED_MEMBER: 'The member of this voice state is uncached.',
 
-  OPUS_ENGINE_MISSING: 'Couldn\'t find an Opus engine.',
+  OPUS_ENGINE_MISSING: 'Couldn\'t find an Opus engine. - please install opus engine.',
 
   UDP_SEND_FAIL: 'Tried to send a UDP packet, but there is no socket available.',
   UDP_ADDRESS_MALFORMED: 'Malformed UDP address or port.',
@@ -67,7 +67,7 @@ const Messages = {
   IMAGE_FORMAT: format => `Invalid image format: ${format}`,
   IMAGE_SIZE: size => `Invalid image size: ${size}`,
 
-  MESSAGE_MISSING: 'Message not found',
+  MESSAGE_MISSING: 'Message not found - please check the message ID supplied.',
   MESSAGE_BULK_DELETE_TYPE: 'The messages must be an Array, Collection, or number.',
   MESSAGE_NONCE_TYPE: 'Message nonce must fit in an unsigned 64-bit integer.',
 
@@ -83,20 +83,20 @@ const Messages = {
 
   MESSAGE_SPLIT_MISSING: 'Message exceeds the max length and contains no split characters.',
 
-  GUILD_CHANNEL_RESOLVE: 'Could not resolve channel to a guild channel.',
-  GUILD_CHANNEL_ORPHAN: 'Could not find a parent to this guild channel.',
-  GUILD_OWNED: 'Guild is owned by the client.',
-  GUILD_RESTRICTED: (state = false) => `Guild is ${state ? 'already' : 'not'} restricted.`,
-  GUILD_MEMBERS_TIMEOUT: 'Members didn\'t arrive in time.',
+  GUILD_CHANNEL_RESOLVE: 'Could not resolve channel to a server channel.',
+  GUILD_CHANNEL_ORPHAN: 'Could not find a parent to this server channel.',
+  GUILD_OWNED: 'Server is owned by the client.',
+  GUILD_RESTRICTED: (state = false) => `Server is ${state ? 'already' : 'not'} restricted.`,
+  GUILD_MEMBERS_TIMEOUT: 'Members didn\'t arrive in time, timeout.',
 
   INVALID_TYPE: (name, expected, an = false) => `Supplied ${name} is not a${an ? 'n' : ''} ${expected}.`,
 
   WEBHOOK_MESSAGE: 'The message was not sent by a webhook.',
 
-  EMOJI_TYPE: 'Emoji must be a string or GuildEmoji/ReactionEmoji',
-  EMOJI_MANAGED: 'Emoji is managed and has no Author.',
+  EMOJI_TYPE: 'Emoji must be a string or Server Emoji/Reaction Emoji',
+  EMOJI_MANAGED: 'Emoji is managed and has no author or ID attached.',
 
-  REACTION_RESOLVE_USER: 'Couldn\'t resolve the user ID to remove from the reaction.',
+  REACTION_RESOLVE_USER: 'Couldn\'t resolve the user ID to remove from the reaction on the requested message.',
 };
 
 for (const [name, message] of Object.entries(Messages)) register(name, message);

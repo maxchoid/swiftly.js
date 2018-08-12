@@ -1,1 +1,1 @@
-## [View the documentation here.](https://swiftly.js.org/#/docs)
+## [View the documentation here.](https://swiftlyjs.org/#/docs)

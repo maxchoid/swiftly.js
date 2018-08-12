@@ -28,7 +28,7 @@ client.on('message', message => {
   // If the message content starts with "!kick"
   if (message.content.startsWith('!kick')) {
     // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://swiftly.js.org/#/docs/main/master/class/MessageMentions
+    // Read more about mentions over at https://swiftlyjs.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
     // If we have a user mentioned
     if (user) {
@@ -97,7 +97,7 @@ client.on('message', message => {
   // if the message content starts with "!ban"
   if (message.content.startsWith('!ban')) {
     // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://swiftly.js.org/#/docs/main/master/class/MessageMentions
+    // Read more about mentions over at https://swiftlyjs.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
     // If we have a user mentioned
     if (user) {
@@ -110,7 +110,7 @@ client.on('message', message => {
          * Make sure you run this on a member, not a user!
          * There are big differences between a user and a member
          * Read more about what ban options there are over at
-         * https://swiftly.js.org/#/docs/main/master/class/GuildMember?scrollTo=ban
+         * https://swiftlyjs.org/#/docs/main/master/class/GuildMember?scrollTo=ban
          */
         member.ban({
           reason: 'They were bad!',

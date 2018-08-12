@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://swiftly.js.org"><img src="https://swiftly.js.org/static/logo.svg" width="546" alt="swiftly.js" /></a>
+    <a href="https://swiftlyjs.org"><img src="https://swiftlyjs.org/static/logo.svg" width="546" alt="swiftly.js" /></a>
   </p>
   <br />
   <p>
@@ -22,8 +22,6 @@ swiftlyJS is a powerful [Node](https://nodejs.org) module that allows you to int
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
 - Object-oriented
-- Predictable abstractions
-- Performant
 - 100% coverage of the Discord API
 
 ## Installation
@@ -34,11 +32,6 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 Without voice support: `npm install swiftly.js`  
 With voice support ([node-opus](https://www.npmjs.com/package/node-opus)): `npm install swiftly.js node-opus`  
 With voice support ([opusscript](https://www.npmjs.com/package/opusscript)): `npm install swiftly.js opusscript`
-
-### Audio engines
-The preferred audio engine is node-opus, as it performs significantly better than opusscript. When both are available, swiftly.js will automatically choose node-opus.
-Using opusscript is only recommended for development environments where node-opus is tough to get working.
-For production bots, using node-opus should be considered a necessity, especially if they're going to be running on multiple servers.
 
 ### Optional packages
 - [zlib-sync](https://www.npmjs.com/package/zlib-sync) for significantly faster WebSocket data inflation (`npm install zlib-sync`)
@@ -51,8 +44,8 @@ For production bots, using node-opus should be considered a necessity, especiall
 
 ## Example usage
 ```js
-const Discord = require('swiftly.js');
-const client = new Discord.Client();
+const swift = require('swiftly.js');
+const client = new swift.Client();
 const token = '';
 
 client.on('ready', () => {
@@ -61,7 +54,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('pong');
+    msg.channel.send('pong');
   }
 });
 
@@ -69,21 +62,11 @@ client.login(token);
 ```
 
 ## Links
-* [Website](https://swiftly.js.org/) ([source](https://github.com/swiftlyjs/website))
-* [Documentation](https://swiftly.js.org/#/docs)
+* [Documentation](https://swiftlyjs.org/#/docs)
 * [swiftly.js Discord server](https://discord.gg/Y4yAKBS)
 * [Discord API Discord server](https://discord.gg/discord-api)
 * [GitHub](https://github.com/swiftlyjs/swiftly.js)
 * [NPM](https://www.npmjs.com/package/swiftly.js)
-* [Related libraries](https://discordapi.com/unofficial/libs.html)
-
-### Extensions
-* [RPC](https://www.npmjs.com/package/discord-rpc) ([source](https://github.com/swiftlyjs/RPC))
-
-## Contributing
-Before creating an issue, please ensure that it hasn't already been reported/suggested, and double-check the
-[documentation](https://swiftly.js.org/#/docs).  
-See [the contribution guide](https://github.com/swiftlyjs/swiftly.js/blob/master/.github/CONTRIBUTING.md) if you'd like to submit a PR.
 
 ## Help
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle

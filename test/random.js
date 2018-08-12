@@ -49,7 +49,7 @@ client.on('message', message => {
 
     if (message.content === 'myperms?') {
       message.channel.send('Your permissions are:\n' +
-        JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4));
+        JSON.stringify(message.channel.permissionsFor(message.sender).serialize(), null, 4));
     }
 
     if (message.content === 'delchann') {
@@ -94,11 +94,11 @@ client.on('message', message => {
     }
 
     if (message.content === 'messageme!') {
-      message.author.send('oh, hi there!').catch(e => console.log(e.stack));
+      message.sender.send('oh, hi there!').catch(e => console.log(e.stack));
     }
 
     if (message.content === 'don\'t dm me') {
-      message.author.deleteDM();
+      message.sender.deleteDM();
     }
 
     if (message.content.startsWith('kick')) {

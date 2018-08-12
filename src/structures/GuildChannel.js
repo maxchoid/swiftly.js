@@ -187,7 +187,7 @@ class GuildChannel extends Channel {
    * channel.overwritePermissions({
    * overwrites: [
    *   {
-   *      id: message.author.id,
+   *      id: message.sender.id,
    *      denied: ['VIEW_CHANNEL'],
    *   },
    * ],
@@ -220,10 +220,10 @@ class GuildChannel extends Channel {
    * @returns {Promise<GuildChannel>}
    * @example
    * // Overwrite permissions for a message author
-   * message.channel.updateOverwrite(message.author, {
+   * message.channel.updateOverwrite(message.sender, {
    *   SEND_MESSAGES: false
    * })
-   *   .then(channel => console.log(channel.permissionOverwrites.get(message.author.id)))
+   *   .then(channel => console.log(channel.permissionOverwrites.get(message.sender.id)))
    *   .catch(console.error);
    */
   updateOverwrite(userOrRole, options, reason) {

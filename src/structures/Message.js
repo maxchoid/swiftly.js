@@ -471,7 +471,7 @@ class Message extends Base {
    * @example
    * // Reply to a message
    * message.reply('Hey, I\'m a reply!')
-   *   .then(() => console.log(`Sent a reply to ${message.author.username}`))
+   *   .then(() => console.log(`Sent a reply to ${message.sender.username}`))
    *   .catch(console.error);
    */
   reply(content, options) {
@@ -503,11 +503,11 @@ class Message extends Base {
    */
   equals(message, rawData) {
     if (!message) return false;
-    const embedUpdate = !message.author && !message.attachments;
+    const embedUpdate = !message.sender && !message.attachments;
     if (embedUpdate) return this.id === message.id && this.embeds.length === message.embeds.length;
 
     let equal = this.id === message.id &&
-        this.author.id === message.author.id &&
+        this.author.id === message.sender.id &&
         this.content === message.content &&
         this.tts === message.tts &&
         this.nonce === message.nonce &&

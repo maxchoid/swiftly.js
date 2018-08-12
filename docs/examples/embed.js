@@ -21,7 +21,7 @@ client.on('message', message => {
   if (message.content === 'how to embed') {
     // We can create embeds using the MessageEmbed constructor
     // Read more about all that you can do with the constructor
-    // over at https://swiftly.js.org/#/docs/main/master/class/MessageEmbed
+    // over at https://swiftlyjs.org/#/docs/main/master/class/MessageEmbed
     const embed = new MessageEmbed()
       // Set the title of the field
       .setTitle('A slick little embed')

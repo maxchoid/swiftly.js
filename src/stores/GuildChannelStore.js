@@ -53,7 +53,7 @@ class GuildChannelStore extends DataStore {
    *   type: 'voice',
    *   overwrites: [
    *      {
-   *        id: message.author.id,
+   *        id: message.sender.id,
    *        denied: ['VIEW_CHANNEL'],
    *     },
    *   ],

@@ -64,7 +64,7 @@ client.on('message', message => {
 		// Create the attachment using MessageAttachment
 		const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
 		// Send the attachment in the message channel with a content
-		message.channel.send(`${message.author},`, attachment);
+		message.channel.send(`${message.sender},`, attachment);
 	}
 });
 
@@ -101,7 +101,7 @@ client.on('message', message => {
 		// Create the attachment using MessageAttachment
 		const attachment = new MessageAttachment('./rip.png');
 		// Send the attachment in the message channel with a content
-		message.channel.send(`${message.author},`, attachment);
+		message.channel.send(`${message.sender},`, attachment);
 	}
 });
 
@@ -146,11 +146,11 @@ client.on('message', message => {
 		 * Create the attachment using MessageAttachment,
 		 * overwritting the default file name to 'memes.txt'
 		 * Read more about it over at
-		 * http://swiftly.js.org/#/docs/main/master/class/MessageAttachment
+		 * http://swiftlyjs.org/#/docs/main/master/class/MessageAttachment
 		 */
 		const attachment = new MessageAttachment(buffer, 'memes.txt');
 		// Send the attachment in the message channel with a content
-		message.channel.send(`${message.author}, here are your memes!`, attachment);
+		message.channel.send(`${message.sender}, here are your memes!`, attachment);
 	}
 });
 

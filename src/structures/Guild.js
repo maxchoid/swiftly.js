@@ -378,7 +378,7 @@ class Guild extends Base {
    * @returns {?GuildMember}
    * @example
    * // Get the guild member of a user
-   * const member = guild.member(message.author);
+   * const member = guild.member(message.sender);
    */
   member(user) {
     return this.members.resolve(user);

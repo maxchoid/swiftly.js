@@ -14,7 +14,7 @@ client.on('rateLimit', log);
 
 const commands = {
   eval: message => {
-    if (message.author.id !== owner) return;
+    if (message.semder.id !== owner) return;
     let res;
     try {
       res = eval(message.content);
@@ -30,7 +30,7 @@ const commands = {
 };
 
 client.on('message', message => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  if (!message.content.startsWith(prefix) || message.sender.bot) return;
 
   message.content = message.content.replace(prefix, '').trim().split(' ');
   const command = message.content.shift();
