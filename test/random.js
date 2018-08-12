@@ -34,7 +34,7 @@ client.on('message', message => {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 4000; x++) {
-        message.channel.send(`this is message ${x} of 3999`)
+        message.send(`this is message ${x} of 3999`)
           .then(m => {
             count++;
             console.log('reached', count, ecount);
@@ -48,7 +48,7 @@ client.on('message', message => {
     }
 
     if (message.content === 'myperms?') {
-      message.channel.send('Your permissions are:\n' +
+      message.send('Your permissions are:\n' +
         JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4));
     }
 
@@ -69,7 +69,7 @@ client.on('message', message => {
         .get('url')
         .end((err, res) => {
           client.user.setAvatar(res.body).catch(console.error)
-            .then(user => message.channel.send('Done!'));
+            .then(user => message.send('Done!'));
         });
     }
 
@@ -90,7 +90,7 @@ client.on('message', message => {
       m += `I am aware of ${client.channels.size} channels overall\n`;
       m += `I am aware of ${client.guilds.size} guilds overall\n`;
       m += `I am aware of ${client.users.size} users overall\n`;
-      message.channel.send(m).then(msg => msg.edit('nah')).catch(console.error);
+      message.send(m).then(msg => msg.edit('nah')).catch(console.error);
     }
 
     if (message.content === 'messageme!') {
@@ -104,7 +104,7 @@ client.on('message', message => {
     if (message.content.startsWith('kick')) {
       message.guild.member(message.mentions[0]).kick().then(member => {
         console.log(member);
-        message.channel.send('Kicked!' + member.user.username);
+        message.send('Kicked!' + member.user.username);
       }).catch(console.error);
     }
 
@@ -112,10 +112,10 @@ client.on('message', message => {
       let i = 1;
       const start = Date.now();
       while (i <= 20) {
-        message.channel.send(`Testing my rates, item ${i} of 20`);
+        message.send(`Testing my rates, item ${i} of 20`);
         i++;
       }
-      message.channel.send('last one...').then(m => {
+      message.send('last one...').then(m => {
         const diff = Date.now() - start;
         m.reply(`Each message took ${diff / 21}ms to send`);
       });
@@ -123,7 +123,7 @@ client.on('message', message => {
 
     if (message.content === 'makerole') {
       message.guild.createRole().then(role => {
-        message.channel.send(`Made role ${role.name}`);
+        message.send(`Made role ${role.name}`);
       }).catch(console.error);
     }
   }
@@ -182,12 +182,12 @@ client.on('message', msg => {
 
 client.on('messageReactionAdd', (reaction, user) => {
   if (reaction.message.channel.id !== '222086648706498562') return;
-  reaction.message.channel.send(`${user.username} added reaction ${reaction.emoji}, count is now ${reaction.count}`);
+  reaction.message.send(`${user.username} added reaction ${reaction.emoji}, count is now ${reaction.count}`);
 });
 
 client.on('messageReactionRemove', (reaction, user) => {
   if (reaction.message.channel.id !== '222086648706498562') return;
-  reaction.message.channel.send(`${user.username} removed reaction ${reaction.emoji}, count is now ${reaction.count}`);
+  reaction.message.send(`${user.username} removed reaction ${reaction.emoji}, count is now ${reaction.count}`);
 });
 
 client.on('message', m => {
