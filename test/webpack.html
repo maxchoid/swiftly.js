@@ -21,7 +21,7 @@
       client.ws.on('close', (event) => console.log('[CLIENT] Disconnect!', event));
 
       client.on('message', (message) => {
-        console.log(message.author.username, message.author.id, message.content);
+        console.log(message.sender.username, message.sender.id, message.content);
       });
 
       client.login(localStorage.token || window.token || prompt('token pls', 'abcdef123456'))
