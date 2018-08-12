@@ -8,8 +8,8 @@
     <a href="https://discord.gg/Y4yAKBS"><img src="https://discordapp.com/api/guilds/477971677742104597/embed.png" alt="Discord server" /></a>
     <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/v/swiftly.js.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/swiftly.js"><img src="https://img.shields.io/npm/dt/swiftly.js.svg?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://travis-ci.org/swiftlyjs/swiftly.js"><img src="https://travis-ci.org/swiftlyjs/swiftly.js.svg" alt="Build status" /></a>
-    <a href="https://david-dm.org/swiftlyjs/swiftly.js"><img src="https://img.shields.io/david/swiftlyjs/swiftly.js.svg?maxAge=3600" alt="Dependencies" /></a>
+    <a href="https://travis-ci.org/iilukas/swiftly.js"><img src="https://travis-ci.org/iilukas/swiftly.js.svg" alt="Build status" /></a>
+    <a href="https://david-dm.org/iilukas/swiftly.js"><img src="https://img.shields.io/david/iilukas/swiftly.js.svg?maxAge=3600" alt="Dependencies" /></a>
     <a href="https://www.patreon.com/swiftlyjs"><img src="https://img.shields.io/badge/donate-patreon-F96854.svg" alt="Patreon" /></a>
   </p>
   <p>
