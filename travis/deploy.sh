@@ -26,7 +26,7 @@ fi
 
 # Run the build
 npm run docs
-NODE_ENV=production npm run build:browser
+SET NODE_ENV=production npm run build:browser
 
 if [ $DONT_COMMIT == true ]; then
   echo -e "\e[36m\e[1mNot commiting - exiting early"
@@ -59,7 +59,7 @@ mv docs/docs.json out/$SOURCE.json
 cd out
 git add .
 git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git config user.email "lukas@connectservers.net"
 git commit -m "Docs build for ${SOURCE_TYPE} ${SOURCE}: ${SHA}" || true
 git push $SSH_REPO $TARGET_BRANCH
 
