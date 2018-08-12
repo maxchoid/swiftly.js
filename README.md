@@ -18,7 +18,7 @@
 </div>
 
 ## About
-swiftlyJS is a powerful [Node](https://nodejs.org) module that allows you to interact with the
+Swiftly.JS is a powerful [Node](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
 - Object-oriented
