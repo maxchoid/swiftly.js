@@ -62,7 +62,7 @@ class Emoji extends Base {
    * msg.reply(`Hello! ${emoji}`);
    * @example
    * // Send the emoji used in a reaction to the channel the reaction is part of
-   * reaction.message.send(`The emoji used was: ${reaction.emoji}`);
+   * reaction.message.channel.send(`The emoji used was: ${reaction.emoji}`);
    */
   toString() {
     return this.id ? `<${this.animated ? 'a' : ''}:${this.name}:${this.id}>` : this.name;

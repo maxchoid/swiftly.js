@@ -24,7 +24,7 @@ const commands = {
       console.error(err.stack);
       res = err.message;
     }
-    message.send(res, { code: 'js' });
+    message.channel.send(res, { code: 'js' });
   },
   ping: message => message.reply('pong'),
 };

@@ -29,7 +29,7 @@ client.on('message', message => {
 		// Create the attachment using MessageAttachment
 		const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
 		// Send the attachment in the message channel
-		message.send(attachment);
+		message.channel.send(attachment);
 	}
 });
 
@@ -64,7 +64,7 @@ client.on('message', message => {
 		// Create the attachment using MessageAttachment
 		const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
 		// Send the attachment in the message channel with a content
-		message.send(`${message.author},`, attachment);
+		message.channel.send(`${message.author},`, attachment);
 	}
 });
 
@@ -101,7 +101,7 @@ client.on('message', message => {
 		// Create the attachment using MessageAttachment
 		const attachment = new MessageAttachment('./rip.png');
 		// Send the attachment in the message channel with a content
-		message.send(`${message.author},`, attachment);
+		message.channel.send(`${message.author},`, attachment);
 	}
 });
 
@@ -150,7 +150,7 @@ client.on('message', message => {
 		 */
 		const attachment = new MessageAttachment(buffer, 'memes.txt');
 		// Send the attachment in the message channel with a content
-		message.send(`${message.author}, here are your memes!`, attachment);
+		message.channel.send(`${message.author}, here are your memes!`, attachment);
 	}
 });
 

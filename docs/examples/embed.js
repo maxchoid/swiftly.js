@@ -30,7 +30,7 @@ client.on('message', message => {
       // Set the main content of the embed
       .setDescription('Hello, this is a slick embed!');
     // Send the embed to the same channel as the message
-    message.send(embed);
+    message.channel.send(embed);
   }
 });
 
