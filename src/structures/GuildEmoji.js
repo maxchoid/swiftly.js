@@ -84,10 +84,10 @@ class GuildEmoji extends Emoji {
   }
 
   /**
-   * Fetches the author for this emoji
+   * Fetches the sender for this emoji
    * @returns {Promise<User>}
    */
-  fetchAuthor() {
+  fetchSender() {
     if (this.managed) {
       return Promise.reject(new Error('EMOJI_MANAGED'));
     }
