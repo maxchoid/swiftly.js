@@ -1,6 +1,6 @@
 {
   "name": "swiftly.js",
-  "version": "12.0.7",
+  "version": "12.0.8",
   "description": "A powerful library for interacting with the Discord API",
   "main": "./src/index",
   "types": "./typings/index.d.ts",
