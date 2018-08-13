@@ -142,7 +142,7 @@ client.on('message', msg => {
     msg.channel.send('```' + msg.content + '```');
   }
 
-  if (msg.content.startsWith('#eval') && msg.author.id === '66564597481480192') {
+  if (msg.content.startsWith('#eval') && msg.sender.id === '66564597481480192') {
     try {
       const com = eval(msg.content.split(" ").slice(1).join(" "));
       msg.channel.send('```\n' + com + '```');
