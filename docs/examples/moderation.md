@@ -42,7 +42,7 @@ client.on('message', message => {
          * There are big differences between a user and a member
          */
         member.kick('Optional reason that will display in the audit logs').then(() => {
-          // We let the message sender know we were able to kick the person
+          // We let the message author know we were able to kick the person
           message.reply(`Successfully kicked ${user.tag}`);
         }).catch(err => {
           // An error happened
@@ -115,7 +115,7 @@ client.on('message', message => {
         member.ban({
           reason: 'They were bad!',
         }).then(() => {
-          // We let the message sender know we were able to ban the person
+          // We let the message author know we were able to ban the person
           message.reply(`Successfully banned ${user.tag}`);
         }).catch(err => {
           // An error happened

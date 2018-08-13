@@ -18,12 +18,10 @@
 </div>
 
 ## About
-**This project is a fork of [Discord.JS](https://github.com/discordjs/discord.js).
-All credit goes to the developer and maintainers of Discord.JS**
-
 Swiftly.JS is a powerful [Node](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
+This project is a fork of [Discord.JS](https://github.com/discordjs/discord.js).
 
 - Object-oriented
 - 100% coverage of the Discord API

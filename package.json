@@ -1,6 +1,6 @@
 {
   "name": "swiftly.js",
-  "version": "12.0.8",
+  "version": "12.0.6",
   "description": "A powerful library for interacting with the Discord API",
   "main": "./src/index",
   "types": "./typings/index.d.ts",
@@ -11,7 +11,7 @@
     "lint": "eslint src *.js",
     "lint:fix": "eslint --fix src",
     "build:browser": "webpack",
-    "prepublishOnly": "npm run test && SET NODE_ENV=production npm run build:browser"
+    "prepublishOnly": "npm run test && NODE_ENV=production npm run build:browser"
   },
   "repository": {
     "type": "git",

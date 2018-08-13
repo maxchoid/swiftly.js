@@ -101,18 +101,18 @@ class MessageEmbed {
     this.video = data.video;
 
     /**
-     * The sender of this embed (if there is one)
+     * The author of this embed (if there is one)
      * @type {?Object}
-     * @property {string} name The name of this sender
-     * @property {string} url URL of this sender
-     * @property {string} iconURL URL of the icon for this sender
-     * @property {string} proxyIconURL Proxied URL of the icon for this sender
+     * @property {string} name The name of this author
+     * @property {string} url URL of this author
+     * @property {string} iconURL URL of the icon for this author
+     * @property {string} proxyIconURL Proxied URL of the icon for this author
      */
-    this.sender = data.sender ? {
-      name: data.sender.name,
-      url: data.sender.url,
-      iconURL: data.sender.iconURL || data.sender.icon_url,
-      proxyIconURL: data.sender.proxyIconUrl || data.sender.proxy_icon_url,
+    this.author = data.author ? {
+      name: data.author.name,
+      url: data.author.url,
+      iconURL: data.author.iconURL || data.author.icon_url,
+      proxyIconURL: data.author.proxyIconUrl || data.author.proxy_icon_url,
     } : null;
 
     /**
@@ -198,7 +198,7 @@ class MessageEmbed {
 
   /**
    * Sets the file to upload alongside the embed. This file can be accessed via `attachment://fileName.extension` when
-   * setting an embed image or sender/footer icons. Multiple files can be attached.
+   * setting an embed image or author/footer icons. Multiple files can be attached.
    * @param {Array<FileOptions|string|MessageAttachment>} files Files to attach
    * @returns {MessageEmbed}
    */
@@ -209,14 +209,14 @@ class MessageEmbed {
   }
 
   /**
-   * Sets the sender of this embed.
-   * @param {StringResolvable} name The name of the sender
-   * @param {string} [iconURL] The icon URL of the sender
-   * @param {string} [url] The URL of the sender
+   * Sets the author of this embed.
+   * @param {StringResolvable} name The name of the author
+   * @param {string} [iconURL] The icon URL of the author
+   * @param {string} [url] The URL of the author
    * @returns {MessageEmbed}
    */
-  setSender(name, iconURL, url) {
-    this.sender = { name: Util.resolveString(name), iconURL, url };
+  setAuthor(name, iconURL, url) {
+    this.author = { name: Util.resolveString(name), iconURL, url };
     return this;
   }
 
@@ -324,10 +324,10 @@ class MessageEmbed {
       fields: this.fields,
       thumbnail: this.thumbnail,
       image: this.image,
-      sender: this.sender ? {
-        name: this.sender.name,
-        url: this.sender.url,
-        icon_url: this.sender.iconURL,
+      author: this.author ? {
+        name: this.author.name,
+        url: this.author.url,
+        icon_url: this.author.iconURL,
       } : null,
       footer: this.footer ? {
         text: this.footer.text,

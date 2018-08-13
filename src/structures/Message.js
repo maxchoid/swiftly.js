@@ -55,10 +55,10 @@ class Message extends Base {
     this.content = data.content;
 
     /**
-     * The sender of the message
+     * The author of the message
      * @type {User}
      */
-    this.sender = this.client.users.add(data.sender, !data.webhook_id);
+    this.author = this.client.users.add(data.author, !data.webhook_id);
 
     /**
      * Whether or not this message is pinned
@@ -164,8 +164,8 @@ class Message extends Base {
      */
     this._edits = [];
 
-    if (data.member && this.guild && this.sender) {
-      this.guild.members.add(Object.assign(data.member, { user: this.sender }));
+    if (data.member && this.guild && this.author) {
+      this.guild.members.add(Object.assign(data.member, { user: this.author }));
     }
   }
 
@@ -205,13 +205,13 @@ class Message extends Base {
   }
 
   /**
-   * Represents the sender of the message as a guild member.
-   * Only available if the message comes from a guild where the sender is still a member
+   * Represents the author of the message as a guild member.
+   * Only available if the message comes from a guild where the author is still a member
    * @type {?GuildMember}
    * @readonly
    */
   get member() {
-    return this.guild ? this.guild.member(this.sender) || null : null;
+    return this.guild ? this.guild.member(this.author) || null : null;
   }
 
   /**
@@ -323,7 +323,7 @@ class Message extends Base {
    * @readonly
    */
   get editable() {
-    return this.sender.id === this.client.user.id;
+    return this.author.id === this.client.user.id;
   }
 
   /**
@@ -332,7 +332,7 @@ class Message extends Base {
    * @readonly
    */
   get deletable() {
-    return !this.deleted && (this.sender.id === this.client.user.id || (this.guild &&
+    return !this.deleted && (this.author.id === this.client.user.id || (this.guild &&
       this.channel.permissionsFor(this.client.user).has(Permissions.FLAGS.MANAGE_MESSAGES)
     ));
   }
@@ -442,7 +442,7 @@ class Message extends Base {
    * @example
    * // Delete a message
    * message.delete()
-   *   .then(msg => console.log(`Deleted message from ${msg.sender.username}`))
+   *   .then(msg => console.log(`Deleted message from ${msg.author.username}`))
    *   .catch(console.error);
    */
   delete({ timeout = 0, reason } = {}) {
@@ -481,7 +481,7 @@ class Message extends Base {
     } else if (!options) {
       options = {};
     }
-    return this.channel.send(content, Object.assign(options, { reply: this.member || this.sender }));
+    return this.channel.send(content, Object.assign(options, { reply: this.member || this.author }));
   }
 
   /**
@@ -507,7 +507,7 @@ class Message extends Base {
     if (embedUpdate) return this.id === message.id && this.embeds.length === message.embeds.length;
 
     let equal = this.id === message.id &&
-        this.sender.id === message.sender.id &&
+        this.author.id === message.sender.id &&
         this.content === message.content &&
         this.tts === message.tts &&
         this.nonce === message.nonce &&
@@ -537,7 +537,7 @@ class Message extends Base {
   toJSON() {
     return super.toJSON({
       channel: 'channelID',
-      sender: 'senderID',
+      author: 'authorID',
       application: 'applicationID',
       guild: 'guildID',
       cleanContent: true,
