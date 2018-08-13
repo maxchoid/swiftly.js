@@ -21,7 +21,7 @@
 Swiftly.JS is a powerful [Node](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
-This project is a fork of [Discord.JS](https://github.com/discordjs/discord.js).
+**This project is a fork of [Discord.JS](https://github.com/discordjs/discord.js) all credit to the contributors and developers of Discord.JS**
 
 - Object-oriented
 - 100% coverage of the Discord API
@@ -72,4 +72,4 @@ client.login(token);
 
 ## Help
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle
-nudge in the right direction, please don't hesitate to join our official [Swiftly.js Server](https://discord.gg/Y4yAKBS).
+nudge in the right direction, please don't hesitate to join our official [Swiftly.JS Server](https://discord.gg/Y4yAKBS).
