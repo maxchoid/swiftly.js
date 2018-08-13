@@ -36,13 +36,13 @@ client.on('presenceUpdate', (a, b) => {
 
 client.on('message', m => {
   if (!m.guild) return;
-  if (m.sender.id !== '66564597481480192') return;
+  if (m.author.id !== '66564597481480192') return;
   if (m.content.startsWith('/join')) {
     const channel = m.guild.channels.get(m.content.split(' ')[1]) || m.member.voice.channel;
     if (channel && channel.type === 'voice') {
       channel.join().then(conn => {
         const receiver = conn.createReceiver();
-        receiver.createStream(m.sender, true).on('data', b => console.log(b.toString()));
+        receiver.createStream(m.author, true).on('data', b => console.log(b.toString()));
         conn.player.on('error', (...e) => console.log('player', ...e));
         if (!connections.has(m.guild.id)) connections.set(m.guild.id, { conn, queue: [] });
         m.reply('ok!');
@@ -52,7 +52,7 @@ client.on('message', m => {
     } else {
       m.reply('Specify a voice channel!');
     }
-  } else if (m.content.startsWith('#eval') && m.sender.id === '66564597481480192') {
+  } else if (m.content.startsWith('#eval') && m.author.id === '66564597481480192') {
     try {
       const com = eval(m.content.split(' ').slice(1).join(' '));
       m.channel.send(com, { code: true });

@@ -16,7 +16,7 @@ class UserStore extends DataStore {
    * Data that resolves to give a User object. This can be:
    * * A User object
    * * A Snowflake
-   * * A Message object (resolves to the message sender)
+   * * A Message object (resolves to the message author)
    * * A GuildMember object
    * @typedef {User|Snowflake|Message|GuildMember} UserResolvable
    */
@@ -28,7 +28,7 @@ class UserStore extends DataStore {
    */
   resolve(user) {
     if (user instanceof GuildMember) return user.user;
-    if (user instanceof Message) return user.sender;
+    if (user instanceof Message) return user.author;
     return super.resolve(user);
   }
 
@@ -39,7 +39,7 @@ class UserStore extends DataStore {
    */
   resolveID(user) {
     if (user instanceof GuildMember) return user.user.id;
-    if (user instanceof Message) return user.sender.id;
+    if (user instanceof Message) return user.author.id;
     return super.resolveID(user);
   }
 

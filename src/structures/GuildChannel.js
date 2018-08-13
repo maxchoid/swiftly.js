@@ -219,7 +219,7 @@ class GuildChannel extends Channel {
    * @param {string} [reason] Reason for creating/editing this overwrite
    * @returns {Promise<GuildChannel>}
    * @example
-   * // Overwrite permissions for a message sender
+   * // Overwrite permissions for a message author
    * message.channel.updateOverwrite(message.sender, {
    *   SEND_MESSAGES: false
    * })
