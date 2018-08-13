@@ -52,7 +52,7 @@ class MessageStore extends DataStore {
    * @example
    * // Get messages and filter by user ID
    * channel.messages.fetch()
-   *   .then(messages => console.log(`${messages.filter(m => m.author.id === '84484653687267328').size} messages`))
+   *   .then(messages => console.log(`${messages.filter(m => m.sender.id === '84484653687267328').size} messages`))
    *   .catch(console.error);
    */
   fetch(message) {
